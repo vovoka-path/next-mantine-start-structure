@@ -1,4 +1,4 @@
-import { TablerIconsProps } from "@tabler/icons-react";
+import { TablerIconsProps } from '@tabler/icons-react';
 
 export interface IMenuItem {
   title: string;

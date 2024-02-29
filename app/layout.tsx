@@ -3,8 +3,8 @@ import { ColorSchemeScript } from '@mantine/core';
 import './global.css';
 import Providers from 'providers';
 import Navbar from 'components/Layout/Navbar';
-import { siteMetadata } from '@/data/pagesMetadata';
-import { genPageMetadata } from '@/components/Seo/genPageMetadata';
+import { siteMetadata } from 'data/pagesMetadata';
+import { genPageMetadata } from 'components/Seo/genPageMetadata';
 
 export const metadata = genPageMetadata({
   title: siteMetadata.title,

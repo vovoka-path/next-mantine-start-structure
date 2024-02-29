@@ -1,7 +1,6 @@
 import { Button } from '@mantine/core';
 import Link from 'next/link';
-import classes from './MobileNavbar.module.css';
-import menuItems from '@/data/menuItems';
+import menuItems from 'data/menuItems';
 import { usePathname } from 'next/navigation';
 
 interface MobileMenuProps {

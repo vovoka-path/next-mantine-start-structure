@@ -7,7 +7,7 @@ import { useDisclosure } from '@mantine/hooks';
 import DesktopMenu from './DesktopMenu';
 import MobileMenu from './MobileMenu';
 import { NavbarProps } from './interfaces';
-import menuItems from '@/data/menuItems';
+import menuItems from 'data/menuItems';
 
 
 export default function Navbar({ children }: NavbarProps) {
