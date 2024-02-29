@@ -1,9 +1,14 @@
 import { Button } from '@mantine/core';
-import menuItems from 'data/menuItems.json';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import classes from './MobileNavbar.module.css';
+import menuItems from '@/data/menuItems';
+import { usePathname } from 'next/navigation';
 
-export default function DesktopMenu() {
+interface MobileMenuProps {
+  toggle: () => void;
+}
+
+export default function MobileMenu({toggle}: MobileMenuProps) {
   const pathname = usePathname();
 
   return (
@@ -13,9 +18,9 @@ export default function DesktopMenu() {
           component={Link}
           href={item.link}
           data-disabled={item.link === pathname}
-          // onClick={handleClick}
+          onClick={toggle}
           variant='subtle'
-          key={'desktop' + item.title}
+          key={'mobile' + item.title}
         >
           {item.title}
         </Button>

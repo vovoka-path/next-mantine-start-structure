@@ -1,14 +1,16 @@
 import '@mantine/core/styles.css';
 import { ColorSchemeScript } from '@mantine/core';
-
 import './global.css';
 import Providers from 'providers';
-import Navbar from 'components/Navbar';
+import Navbar from 'components/Layout/Navbar';
+import { siteMetadata } from '@/data/pagesMetadata';
+import { genPageMetadata } from '@/components/Seo/genPageMetadata';
 
-export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
-};
+export const metadata = genPageMetadata({
+  title: siteMetadata.title,
+  description: siteMetadata.description,
+  imageUrl: siteMetadata.defaultOGImage,
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

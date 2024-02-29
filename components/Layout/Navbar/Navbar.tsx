@@ -3,12 +3,12 @@
 import { Group, Burger, AppShell } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
+
 import DesktopMenu from './DesktopMenu';
 import MobileMenu from './MobileMenu';
+import { NavbarProps } from './interfaces';
+import menuItems from '@/data/menuItems';
 
-interface NavbarProps {
-  children: React.ReactNode;
-}
 
 export default function Navbar({ children }: NavbarProps) {
   const [opened, { toggle }] = useDisclosure();
@@ -29,14 +29,14 @@ export default function Navbar({ children }: NavbarProps) {
           <Group justify='space-between' style={{ flex: 1 }}>
             <MantineLogo size={30} />
             <Group ml='xl' gap={0} visibleFrom='sm'>
-              <DesktopMenu />
+              <DesktopMenu menuItems={menuItems}/>
             </Group>
           </Group>
         </Group>
       </AppShell.Header>
 
       <AppShell.Navbar py='md' px={4}>
-        <MobileMenu toggle={toggle} />
+        <MobileMenu menuItems={menuItems} toggle={toggle} />
       </AppShell.Navbar>
 
       <AppShell.Main>{children}</AppShell.Main>
