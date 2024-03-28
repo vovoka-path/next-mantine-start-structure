@@ -1,6 +1,6 @@
-import { genPageMetadata } from 'components/Seo/genPageMetadata';
-import { getJsonLdString } from 'services/seo';
-import ld from './ld.json';
+import { genPageMetadata } from '@/components/Seo/genPageMetadata';
+import ld from './ld-home.json';
+import LDJson from '@/components/Seo/LDJson';
 
 export const metadata = genPageMetadata({
   title: 'Home',
@@ -11,13 +11,7 @@ export const metadata = genPageMetadata({
 export default function HomePage() {
   return (
     <>
-      <head>
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={getJsonLdString(ld)}
-          key='product-jsonld'
-        />
-      </head>
+      <LDJson ldjson={ld} />
       <div>Home page</div>
       <h1>Title</h1>
       <h2>Description</h2>
