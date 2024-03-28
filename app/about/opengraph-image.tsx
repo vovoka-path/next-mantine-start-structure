@@ -1,4 +1,4 @@
-import OGImage from 'components/Seo/OGImage';
+import OGGeneratedImage from 'components/Seo/OGImage';
 
 export const runtime = 'edge';
 
@@ -11,7 +11,7 @@ export const size = {
 export const contentType = 'image/png';
 
 export default async function Image() {
-  return await OGImage({
+  return await OGGeneratedImage({
     title: 'ABOUT page OG image title',
     description: 'ABOUT page OG image description is not set for resolving social open graph or twitter images',
     imageUrl: '',

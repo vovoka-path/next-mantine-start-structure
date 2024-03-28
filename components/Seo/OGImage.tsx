@@ -11,7 +11,7 @@ export type ImageProps = {
   imageUrl?: string;
 };
 
-export default async function OGImage(
+export default async function OGGeneratedImage(
   props?: ImageProps
 ): Promise<ImageResponse> {
   const { title, description, imageUrl } = {

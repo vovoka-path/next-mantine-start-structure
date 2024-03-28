@@ -1,4 +1,4 @@
-import OGImage from 'components/Seo/OGImage';
+import OGGeneratedImage from 'components/Seo/OGImage';
 
 export const runtime = 'edge';
 
@@ -11,7 +11,7 @@ export const size = {
 export const contentType = 'image/png';
 
 export default async function Image() {
-  return await OGImage({
+  return await OGGeneratedImage({
     title: 'Default root OG image title',
     description: 'Default root OG image description',
     imageUrl: '',
