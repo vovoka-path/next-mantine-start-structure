@@ -1,6 +1,6 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { Button, useMantineTheme } from '@mantine/core';
+import { Anchor, Button, useMantineTheme } from '@mantine/core';
 
 import { IMenuItem } from '../interfaces';
 
@@ -19,14 +19,24 @@ export default function DesktopMenu({ menuItems }: DesktopMenuProps) {
       {menuItems.map((item) => (
         <Button
           key={'desktop' + item.link}
-          component={Link}
-          href={item.link}
           color={theme.colors.primary[6]}
           variant={isActive(item.link) ? 'light' : 'subtle'}
         >
-          {item.title}
+          <Anchor href={item.link}>{item.title}</Anchor>
         </Button>
       ))}
     </>
   );
+}
+
+{
+  /* <Button
+    key={'desktop' + item.link}
+    component={Link}
+    href={item.link}
+    color={theme.colors.primary[6]}
+    variant={isActive(item.link) ? 'light' : 'subtle'}
+  >
+    {item.title}
+  </Button> */
 }
