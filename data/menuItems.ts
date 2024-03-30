@@ -9,12 +9,12 @@ const menuItems: IMenuItem[] = [
   },
   {
     title: 'About',
-    link: '/about',
+    link: '/about.html',
     leftIcon: IconFriends,
   },
   {
     title: 'Contact',
-    link: '/contact',
+    link: '/contact.html',
     leftIcon: IconMail,
   },
 ];
