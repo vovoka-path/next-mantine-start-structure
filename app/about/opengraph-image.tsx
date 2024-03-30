@@ -1,4 +1,4 @@
-import OGImage from 'components/Seo/OGImage';
+import OGImage from '@/components/Seo/OGImage/OGImage';
 
 export const runtime = 'edge';
 

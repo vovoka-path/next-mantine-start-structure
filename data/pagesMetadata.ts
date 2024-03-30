@@ -2,7 +2,7 @@ export const url = process.env.NEXT_PUBLIC_SITE_URL;
 export const domain = url?.split('/')[2] || 'example.com';
 
 export const siteMetadata = {
-  metadataBase: new URL(url || 'http://localhost:3000'),
+  metadataBase: new URL(url || `http://localhost:${process.env.PORT || 3000}`),
   siteUrl: domain,
   title: 'Website Title',
   description: 'Website description',

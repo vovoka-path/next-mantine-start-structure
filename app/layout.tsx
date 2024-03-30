@@ -4,7 +4,7 @@ import './global.css';
 import Providers from 'providers';
 import Navbar from 'components/Layout/Navbar';
 import { siteMetadata } from 'data/pagesMetadata';
-import { genPageMetadata } from 'components/Seo/genPageMetadata';
+import { genPageMetadata } from '@/components/Seo/genPageMetadata';
 
 export const metadata = genPageMetadata({
   title: siteMetadata.title,
@@ -12,7 +12,11 @@ export const metadata = genPageMetadata({
   imageUrl: siteMetadata.defaultOGImage,
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang='en'>
       <head>
