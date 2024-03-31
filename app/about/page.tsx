@@ -1,6 +1,6 @@
-import LDJson from '@/components/Seo/LDJson';
-import { genPageMetadata } from '@/components/Seo/genPageMetadata';
+import StructuredData from '@/components/Seo/StructuredData';
 import ld from './ld.json';
+import { genPageMetadata } from '@/components/Seo/genPageMetadata';
 
 export const metadata = genPageMetadata({
   title: 'About',
@@ -11,7 +11,7 @@ export const metadata = genPageMetadata({
 export default function AboutPage() {
   return (
     <>
-      <LDJson ldjson={ld} />
+      <StructuredData ldjson={ld} />
       <div>About page</div>
       <h1>Title</h1>
       <h2>Description</h2>
