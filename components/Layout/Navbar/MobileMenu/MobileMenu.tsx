@@ -42,22 +42,24 @@ export default function MobileMenu({ menuItems, toggle }: MobileMenuProps) {
           py={'xs'}
           bg={isActive(item.link) ? theme.colors.primary[0] : 'transparent'}
         >
-          <Anchor href={item.link} onClick={toggle} variant='subtle'>
-            {item.title}
-          </Anchor>
+          <NavLink
+            component={Link}
+            color={theme.colors.primary[6]}
+            label={item.title}
+            href={item.link}
+            active
+            onClick={toggle}
+            variant='subtle'
+            leftSection={LeftSection({ leftIcon: item.leftIcon })}
+          />
         </Box>
       ))}
     </>
   );
 }
 
-/* <NavLink
-    component={Link}
-    color={theme.colors.primary[6]}
-    label={item.title}
-    href={item.link}
-    active
-    onClick={toggle}
-    variant='subtle'
-    leftSection={LeftSection({ leftIcon: item.leftIcon })}
-  /> */
+{
+  /* <Anchor href={item.link} onClick={toggle} variant='subtle'>
+            {item.title}
+          </Anchor> */
+}

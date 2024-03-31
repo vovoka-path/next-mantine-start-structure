@@ -1,10 +1,12 @@
 import { getJsonLdString } from './getJsonLdString';
 
 interface LDJsonProps {
-  ldjson: any;
+  ldjson: {
+    [key: string]: any;
+  };
 }
 
-export default async function LDJson({ ldjson }: LDJsonProps) {
+export default function StructuredData({ ldjson }: LDJsonProps) {
   return (
     <>
       <script

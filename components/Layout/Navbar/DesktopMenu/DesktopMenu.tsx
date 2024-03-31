@@ -19,10 +19,12 @@ export default function DesktopMenu({ menuItems }: DesktopMenuProps) {
       {menuItems.map((item) => (
         <Button
           key={'desktop' + item.link}
+          component={Link}
+          href={item.link}
           color={theme.colors.primary[6]}
           variant={isActive(item.link) ? 'light' : 'subtle'}
         >
-          <Anchor href={item.link}>{item.title}</Anchor>
+          {item.title}
         </Button>
       ))}
     </>
@@ -31,12 +33,10 @@ export default function DesktopMenu({ menuItems }: DesktopMenuProps) {
 
 {
   /* <Button
-    key={'desktop' + item.link}
-    component={Link}
-    href={item.link}
-    color={theme.colors.primary[6]}
-    variant={isActive(item.link) ? 'light' : 'subtle'}
-  >
-    {item.title}
-  </Button> */
+          key={'desktop' + item.link}
+          color={theme.colors.primary[6]}
+          variant={isActive(item.link) ? 'light' : 'subtle'}
+        >
+          <Anchor href={item.link}>{item.title}</Anchor>
+        </Button> */
 }
