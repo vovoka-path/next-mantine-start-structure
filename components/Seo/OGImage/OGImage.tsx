@@ -1,5 +1,5 @@
 import { ImageResponse } from '@vercel/og';
-import { siteMetadata } from '@/data/pagesMetadata';
+import { siteMetadata } from '@/data/siteMetadata';
 // import { Nunito } from "next/font/google";
 
 // Route segment config

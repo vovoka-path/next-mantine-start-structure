@@ -3,7 +3,7 @@ import { ColorSchemeScript } from '@mantine/core';
 import './global.css';
 import Providers from 'providers';
 import Navbar from 'components/Layout/Navbar';
-import { siteMetadata } from 'data/pagesMetadata';
+import { siteMetadata } from '@/data/siteMetadata';
 import PageMetadata from '@/components/Seo/PageMetadata/PageMetadata';
 
 export const metadata = PageMetadata({

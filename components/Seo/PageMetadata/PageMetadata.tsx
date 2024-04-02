@@ -3,7 +3,7 @@ import {
   siteMetadata,
   defaultOpenGraph,
   defaultTwitter,
-} from '@/data/pagesMetadata';
+} from '@/data/siteMetadata';
 
 interface PageSEOProps {
   title: string;
