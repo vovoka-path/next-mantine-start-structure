@@ -2,10 +2,10 @@ name: 🚀 Deploy website on push to Hosting
 
 on:
   workflow_dispatch:
-  pull_request:
-    types: [closed]
-    branches: ['main']
-    paths: ['out/**']
+#  pull_request:
+#    types: [closed]
+#    branches: ['main']
+#    paths: ['out/**']
   push:
     branches: ['main']
     paths: ['out/**']

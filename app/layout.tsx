@@ -4,9 +4,9 @@ import './global.css';
 import Providers from 'providers';
 import Navbar from 'components/Layout/Navbar';
 import { siteMetadata } from 'data/pagesMetadata';
-import { genPageMetadata } from '@/components/Seo/genPageMetadata';
+import PageMetadata from '@/components/Seo/PageMetadata/PageMetadata';
 
-export const metadata = genPageMetadata({
+export const metadata = PageMetadata({
   title: siteMetadata.title,
   description: siteMetadata.description,
   imageUrl: siteMetadata.defaultOGImage,
