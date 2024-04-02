@@ -15,7 +15,8 @@
     "@vercel/og": "^0.6.2",
     "next": "14.0.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "schema-dts": "^1.1.2"
   },
   "devDependencies": {
     "@tabler/icons-react": "^2.47.0",

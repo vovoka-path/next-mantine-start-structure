@@ -12,7 +12,7 @@ interface PageSEOProps {
   [key: string]: string | undefined;
 }
 
-export function genPageMetadata({
+export default function PageMetadata({
   title,
   description,
   imageUrl,

@@ -1,17 +1,23 @@
-import { getJsonLdString } from './getJsonLdString';
-
-interface LDJsonProps {
-  ldjson: {
-    [key: string]: any;
-  };
+interface IJsonLD {
+  [key: string]: any;
 }
 
-export default function StructuredData({ ldjson }: LDJsonProps) {
+interface LDJsonProps {
+  jsonLd: IJsonLD;
+}
+
+export const jsonLdToString = (jsonLD: IJsonLD) => {
+  return {
+    __html: JSON.stringify(jsonLD),
+  };
+};
+
+export default function StructuredData({ jsonLd }: LDJsonProps) {
   return (
     <>
       <script
         type='application/ld+json'
-        dangerouslySetInnerHTML={getJsonLdString(ldjson)}
+        dangerouslySetInnerHTML={jsonLdToString(jsonLd)}
         key='product-jsonld'
       />
     </>
